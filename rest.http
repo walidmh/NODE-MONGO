@@ -1,0 +1,21 @@
+GET http://localhost:3000/movies?year=2019
+
+###
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+    "title": "Avengers 1",
+    "createdAt": "2018-01-01",
+    "year": 2019,
+    "category": "SF"
+}
+
+####
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+   "username": "user",
+   "password": "password"
+}
