@@ -5,13 +5,14 @@ const express = require('express');
 const movieRouter = require('./routes/movie');
 const bodyparser = require('body-parser');
 const securityRouter = require('./routes/user');
+const verifyToken = require('./middlewares/security');
 
 const app = express();
 
 app.use(bodyparser.json());
-app.use('/movies',movieRouter);
 app.use('/' ,securityRouter);
-
+app.use(verifyToken);
+app.use('/movies',movieRouter);
 
 
 app.listen(3000, () => console.log("Listening"));

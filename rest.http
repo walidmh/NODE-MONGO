@@ -19,3 +19,7 @@ Content-Type: application/json
    "username": "user",
    "password": "password"
 }
+
+####
+GET http://localhost:3000/movies
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmaXJzdE5hbWUiOiJ1c2VyIiwiaWF0IjoxNTU4MDk5MDAyLCJleHAiOjE1NTgxMDI2MDJ9.U_s0Dm_cyndfKLthnK0-Dh3SJDqAzmjl8pa91Wr1CEs
