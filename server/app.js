@@ -6,9 +6,11 @@ const movieRouter = require('./routes/movie');
 const bodyparser = require('body-parser');
 const securityRouter = require('./routes/user');
 const verifyToken = require('./middlewares/security');
+const cors = require('cors');
 
 const app = express();
 
+app.use(cors());
 app.use(bodyparser.json());
 app.use('/' ,securityRouter);
 app.use(verifyToken);
